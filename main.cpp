@@ -31,7 +31,7 @@ int main()
                 sf::Vector2i localPosition = sf::Mouse::getPosition(app);
                 int posicionX = localPosition.x;
                 int posicionY = localPosition.y;
-                int i = 0;
+                int i = 20;
                 //Mostrar las coordenadas
                 cout << "Mouse en posicion x: " << posicionX  <<"posicion y: " << posicionY << endl;
             }
