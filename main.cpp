@@ -35,6 +35,9 @@ int main()
                 //Mostrar las coordenadas
                 cout << "Mouse en posicion x: " << posicionX  <<"posicion y: " << posicionY << endl;
             }
+
+            //Modulo raul
+            if()
         }
 
         // Clear screen
