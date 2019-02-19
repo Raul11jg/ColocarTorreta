@@ -31,13 +31,11 @@ int main()
                 sf::Vector2i localPosition = sf::Mouse::getPosition(app);
                 int posicionX = localPosition.x;
                 int posicionY = localPosition.y;
-                MODERNO
+
                 //Mostrar las coordenadas
                 cout << "Mouse en posicion x: " << posicionX  <<"posicion y: " << posicionY << endl;
             }
 
-            //Modulo raul
-            if()
         }
 
         // Clear screen
