@@ -16,7 +16,7 @@ int main()
     sf::Sprite sprite(texture);
 
     //Definir rectangulo, que sera la torreta
-    sf::RectangleShape torreta(sf::Vector2f(15.f, 15.f));
+    sf::RectangleShape torreta(sf::Vector2f(32.f, 32.f));
 
 
     //Crear matriz para colocar las torretas
@@ -82,7 +82,7 @@ private:
     sf::Texture m_tileset;
 };
 
-        // define the level with an array of tile indices
+    // define the level with an array of tile indices
     const int level[] =
     {
         0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -112,18 +112,27 @@ private:
 
 
             if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+
                 //Obtener coordenadas de la ventana
                 sf::Vector2i localPosition = sf::Mouse::getPosition(app);
                 int posicionX = localPosition.x;
                 int posicionY = localPosition.y;
 
-                //Dibujar la torreta en la posicion que se clica
-                torreta.setPosition(posicionX - 7.5f,posicionY - 7.5f);
-                sf::Color color(255, 0, 0);
-                torreta.setFillColor(color);
+                //Obtener parte entera de la division
+                int i = (posicionX/32);
+                int j = (posicionY/32);
 
                 //Mostrar las coordenadas
                 cout << "Mouse en posicion x: " << posicionX  <<"posicion y: " << posicionY << endl;
+                //Mostrar las i  j
+                cout << "i: " << i  <<"j: " << j << endl;
+
+                //Dibujar la torreta en el cuadrado de la matriz
+                torreta.setPosition(i*32.f ,j*32.f);
+                sf::Color color(255, 0, 0);
+                torreta.setFillColor(color);
+
+
             }
 
         }
