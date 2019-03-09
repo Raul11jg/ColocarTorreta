@@ -35,7 +35,7 @@ int main()
     //Defino vector donde iran las torretas
     std::vector<Torreta> vectorTorreta;
 
-
+    bool disparando = false;
     //Crear matriz para colocar las torretas
     class TileMap : public sf::Drawable, public sf::Transformable
 
@@ -144,18 +144,22 @@ private:
                 //Mostrar las i  j
                 cout << "i: " << i  <<"j: " << j << endl;
 
-                //Dibujar la torreta en el cuadrado de la matriz
-                Torreta torreta1(sf::Vector2f(32.f,32.f));
-                torreta1.setPos(sf::Vector2f(i*32.f ,j*32.f));
-                vectorTorreta.push_back(torreta1);
+                //Crea la clase torreta dandole un tamanio
+                Torreta torreta(sf::Vector2f(32.f,32.f));
+                //Coloca la torreta en una posicion llamando a una funcion que hemos creado en la clase torreta setPos
+                torreta.setPos(sf::Vector2f(i*32.f ,j*32.f));
+                //Anade la torreta creada al vector de torretas
+                vectorTorreta.push_back(torreta);
 
 
 
             }
-             if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
-
+             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+                disparando=true;
              }
 
+
+            //Dibujar selector en el mapa para poner la torreta donde marque
 
                 //Obtener coordenadas de la ventana
                 sf::Vector2i localPosition = sf::Mouse::getPosition(app);
@@ -173,25 +177,32 @@ private:
 
                 //Dibujar el selector en el cuadrado de la matriz
                 selector.setPosition(i*32.f ,j*32.f);
-
-
-
         }
-
-
 
 
         // Clear screen
         app.clear();
-
-        // Draw the sprite
-        //app.draw(sprite);
-
         //Dibujar mapa
         app.draw(map);
 
+         if(disparando ==true){
+                //Recorro el vector de torretas, las cuales dispararan al centro del mapa cada x tiempo
+                for(int i=0; i<vectorTorreta.size(); i++){
+                    Bala nuevaBala(sf::Vector2f(5.f,5.f));
+                    nuevaBala.setPos(sf::Vector2f(vectorTorreta[i].getX(), vectorTorreta[i].getY()));
+                    vectorBalas.push_back(nuevaBala);
+                }
+                disparando=false;
+         }
 
-       for(int i=0; i<vectorTorreta.size(); i++)
+         for(int i=0; i<vectorBalas.size(); i++){
+            vectorBalas[i].draw(app);
+            vectorBalas[i].disparar(3);
+         }
+
+
+        //Recorrer el vector de torretas y dibujar las torretas
+        for(int i=0; i<vectorTorreta.size(); i++)
             vectorTorreta[i].draw(app);
 
         //Dibujar la torreta

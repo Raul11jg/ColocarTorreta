@@ -3,14 +3,14 @@
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1552147971 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
+1552149158 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Bala.h"
 	"Torreta.h"
 	<vector>
 
-1552146771 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Bala.h
+1552149319 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Bala.h
 	<SFML/Graphics.hpp>
 	<iostream>
 

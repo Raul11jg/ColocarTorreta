@@ -10,15 +10,17 @@ class Bala
     public:
         Bala(sf::Vector2f size){
             bala.setSize(size);
+            sf::Color color(255, 255, 0);
+            bala.setFillColor(color);
         }
         void disparar(int speed){
             bala.move(speed, 0);
         }
-        void draw(sf::RenderWindow &app){
-            app.draw(bala);
-        }
         void setPos(sf::Vector2f newPos){
             bala.setPosition(newPos);
+        }
+        void draw(sf::RenderWindow &Window){
+            Window.draw(bala);
         }
     protected:
     private:
