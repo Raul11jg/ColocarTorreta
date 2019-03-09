@@ -3,14 +3,15 @@
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1552149158 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
+1552152876 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Bala.h"
 	"Torreta.h"
+	"Enemigo.h"
 	<vector>
 
-1552149319 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Bala.h
+1552152510 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Bala.h
 	<SFML/Graphics.hpp>
 	<iostream>
 
@@ -21,4 +22,6 @@
 1552147115 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/src/Bala.cpp
 
 1552147119 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/src/Torreta.cpp
+
+1552152241 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Enemigo.h
 

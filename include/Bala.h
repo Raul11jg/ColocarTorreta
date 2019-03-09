@@ -19,6 +19,18 @@ class Bala
         void setPos(sf::Vector2f newPos){
             bala.setPosition(newPos);
         }
+        int getLeft(){
+            return bala.getPosition().x;
+        }
+        int getTop(){
+            return bala.getPosition().y;
+        }
+        int getBottom(){
+            return bala.getPosition().y + bala.getSize().y;
+        }
+        int getRight(){
+            return bala.getPosition().x + bala.getSize().x;
+        }
         void draw(sf::RenderWindow &Window){
             Window.draw(bala);
         }

@@ -43,11 +43,9 @@
 		</Compiler>
 		<Unit filename="cb.bmp" />
 		<Unit filename="include/Bala.h" />
+		<Unit filename="include/Enemigo.h" />
 		<Unit filename="include/Torreta.h" />
-		<Unit filename="include/bala.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Bala.cpp" />
-		<Unit filename="src/Torreta.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

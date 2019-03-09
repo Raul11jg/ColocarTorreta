@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Bala.h"
 #include "Torreta.h"
+#include "Enemigo.h"
 #include <vector>
 
 using namespace std;
@@ -27,8 +28,7 @@ int main()
     selector.setOutlineThickness(4.f);
     selector.setOutlineColor(sf::Color(255, 255, 255)); //Color blanco
 
-    //Definir bala
-    Bala bala(sf::Vector2f(5.f, 5.f));
+
     //Defino vector donde meto todas las balas
     std::vector<Bala> vectorBalas;
 
@@ -36,6 +36,12 @@ int main()
     std::vector<Torreta> vectorTorreta;
 
     bool disparando = false;
+
+    //Crear enemigo en una posicion fija
+    Enemigo enemigo(sf::Vector2f(40.f,40.f));
+    enemigo.setPos(sf::Vector2f(150.f,150.f));
+
+
     //Crear matriz para colocar las torretas
     class TileMap : public sf::Drawable, public sf::Transformable
 
@@ -184,7 +190,8 @@ private:
         app.clear();
         //Dibujar mapa
         app.draw(map);
-
+        //Dibujar enemigo
+        enemigo.draw(app);
          if(disparando ==true){
                 //Recorro el vector de torretas, las cuales dispararan al centro del mapa cada x tiempo
                 for(int i=0; i<vectorTorreta.size(); i++){
@@ -198,6 +205,7 @@ private:
          for(int i=0; i<vectorBalas.size(); i++){
             vectorBalas[i].draw(app);
             vectorBalas[i].disparar(3);
+            enemigo.colisionBala(vectorBalas[i]);
          }
 
 
