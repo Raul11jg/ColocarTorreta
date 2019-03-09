@@ -32,6 +32,9 @@ int main()
     //Defino vector donde meto todas las balas
     std::vector<Bala> vectorBalas;
 
+    //Defino vector donde iran las torretas
+    std::vector<Torreta> vectorTorreta;
+
 
     //Crear matriz para colocar las torretas
     class TileMap : public sf::Drawable, public sf::Transformable
@@ -144,7 +147,8 @@ private:
                 //Dibujar la torreta en el cuadrado de la matriz
                 Torreta torreta1(sf::Vector2f(32.f,32.f));
                 torreta1.setPos(sf::Vector2f(i*32.f ,j*32.f));
-                torreta1.draw(app);
+                vectorTorreta.push_back(torreta1);
+
 
 
             }
@@ -178,7 +182,7 @@ private:
 
 
         // Clear screen
-        //app.clear();
+        app.clear();
 
         // Draw the sprite
         //app.draw(sprite);
@@ -186,6 +190,9 @@ private:
         //Dibujar mapa
         app.draw(map);
 
+
+       for(int i=0; i<vectorTorreta.size(); i++)
+            vectorTorreta[i].draw(app);
 
         //Dibujar la torreta
         app.draw(selector);
