@@ -8,31 +8,36 @@ using namespace std;
 class Torreta
 {
     public:
-        Torreta(sf::Vector2f size){
-            torreta.setSize(size);
-            sf::Color color(255, 0, 0);
+        Torreta(std::string imgDirectory){
 
-            torreta.setFillColor(color);
+        if (!tex.loadFromFile(imgDirectory))
+        {
+            std::cerr << "Error cargando la imagen ballesta.png";
+            exit(0);
+        }
+        sprite.setTexture(tex);
+        //Coloco el origen del sprite en la mitad de la imagen, que tiene 150ancho 120alto. inicialmente el origen se pone en 0,0, top left.
+        sprite.setOrigin(sf::Vector2f(256, 256));
+
         }
         int getX(){
-            return torreta.getPosition().x;
+            return sprite.getPosition().x;
         }
         int getY(){
-            return torreta.getPosition().y;
+            return sprite.getPosition().y;
         }
         void setPos(sf::Vector2f newPos){
-            torreta.setPosition(newPos);
-        }
-        void setTextura(sf::Texture textura){
-            torreta.setTexture(textura);
+            sprite.setPosition(newPos);
         }
         void draw(sf::RenderWindow &Window){
-            Window.draw(torreta);
+            Window.draw(sprite);
         }
 
     protected:
     private:
-        sf::RectangleShape torreta;
+        sf::Texture tex;
+        sf::Sprite sprite;
+
 };
 
 #endif // TORRETA_H

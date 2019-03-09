@@ -156,17 +156,11 @@ private:
                 cout << "i: " << i  <<"j: " << j << endl;
 
                 //Crea la clase torreta dandole un tamanio
-                Torreta torreta(sf::Vector2f(32.f,32.f));
+                Torreta torreta("ballesta.png");
                 //Coloca la torreta en una posicion llamando a una funcion que hemos creado en la clase torreta setPos
                 torreta.setPos(sf::Vector2f(i*32.f ,j*32.f));
                 //Anade la torreta creada al vector de torretas
                 vectorTorreta.push_back(torreta);
-
-                sf::Texture texturaTorreta;
-
-                texturaTorreta.loadFromImage("ballesta.png");
-
-
 
             }
              if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
@@ -214,6 +208,7 @@ private:
          for(int i=0; i<vectorBalas.size(); i++){
             vectorBalas[i].draw(app);
             vectorBalas[i].disparar(3);
+            //Si la bala colisiona con el enemigo, muere
             enemigo.colisionBala(vectorBalas[i]);
          }
 

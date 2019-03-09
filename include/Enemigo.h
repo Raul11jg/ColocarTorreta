@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 #ifndef ENEMIGO_H
 #define ENEMIGO_H
 
@@ -30,19 +30,5 @@ class Enemigo
 };
 
 #endif // ENEMIGO_H
-=======
-#ifndef ENEMIGO_H_H
-#define ENEMIGO_H_H
 
 
-class Enemigo.h
-{
-    public:
-        Enemigo.h();
-        virtual ~Enemigo.h();
-    protected:
-    private:
-};
-
-#endif // ENEMIGO_H_H
->>>>>>> Stashed changes
