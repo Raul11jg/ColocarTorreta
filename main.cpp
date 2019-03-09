@@ -15,6 +15,9 @@ int main()
 
     // Load a sprite to display
     sf::Texture texture;
+
+
+
     if (!texture.loadFromFile("cb.bmp"))
         return EXIT_FAILURE;
     sf::Sprite sprite(texture);
@@ -34,6 +37,8 @@ int main()
 
     //Defino vector donde iran las torretas
     std::vector<Torreta> vectorTorreta;
+
+
 
     bool disparando = false;
 
@@ -157,6 +162,10 @@ private:
                 //Anade la torreta creada al vector de torretas
                 vectorTorreta.push_back(torreta);
 
+                sf::Texture texturaTorreta;
+
+                texturaTorreta.loadFromImage("ballesta.png");
+
 
 
             }
@@ -214,6 +223,7 @@ private:
             vectorTorreta[i].draw(app);
 
         //Dibujar la torreta
+
         app.draw(selector);
 
         // Update the window

@@ -1,9 +1,14 @@
 #ifndef BALA_H
 #define BALA_H
 #include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include <iostream>
 
 using namespace std;
+
+const float vida_bala_s = 4.0f;     //Vida bala
+const float velocidad = 1.f;        //Velocidad pixel/segundo
+const float disparo_segundo = 0.5f; //Frecuencia/ segundo
 
 class Bala
 {
@@ -13,7 +18,7 @@ class Bala
             sf::Color color(255, 255, 0);
             bala.setFillColor(color);
         }
-        void disparar(int speed){
+        void disparar(float speed){
             bala.move(speed, 0);
         }
         void setPos(sf::Vector2f newPos){
@@ -35,6 +40,9 @@ class Bala
             Window.draw(bala);
         }
     protected:
+        sf::Vector2f m_direccion_movimiento;
+        float remaining;
+        bool alive;
     private:
         sf::RectangleShape bala;
 };

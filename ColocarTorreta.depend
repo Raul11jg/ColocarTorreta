@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1550594555 source:/home/fv/Escritorio/ColocarTorreta/main.cpp
+1552150176 source:/home/fv/Escritorio/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
+	"Bala.h"
+	"Torreta.h"
+	<vector>
 
 1552152876 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
@@ -23,5 +26,20 @@
 
 1552147119 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/src/Torreta.cpp
 
+<<<<<<< Updated upstream
 1552152241 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Enemigo.h
+=======
+1552150176 /home/fv/Escritorio/ColocarTorreta/include/Bala.h
+	<SFML/Graphics.hpp>
+	<SFML/System.hpp>
+	<iostream>
+
+1552147839 /home/fv/Escritorio/ColocarTorreta/include/Torreta.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1552147839 source:/home/fv/Escritorio/ColocarTorreta/src/Bala.cpp
+
+1552147839 source:/home/fv/Escritorio/ColocarTorreta/src/Torreta.cpp
+>>>>>>> Stashed changes
 
