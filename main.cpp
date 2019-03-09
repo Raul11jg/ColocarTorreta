@@ -1,5 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Bala.h"
+#include "Torreta.h"
+#include <vector>
 
 using namespace std;
 
@@ -15,12 +18,24 @@ int main()
         return EXIT_FAILURE;
     sf::Sprite sprite(texture);
 
-    //Definir rectangulo, que sera la torreta
-    sf::RectangleShape torreta(sf::Vector2f(32.f, 32.f));
+    //definir rectangulo, para selector
+    sf::RectangleShape selector(sf::Vector2f(30.f, 30.f));
+    sf::Color trasnparente(0, 0, 0, 1); //Cuadrado transparente
+    selector.setFillColor(trasnparente);
+
+    //Pintar borde del rectangulo, que sera e selector
+    selector.setOutlineThickness(4.f);
+    selector.setOutlineColor(sf::Color(255, 255, 255)); //Color blanco
+
+    //Definir bala
+    Bala bala(sf::Vector2f(5.f, 5.f));
+    //Defino vector donde meto todas las balas
+    std::vector<Bala> vectorBalas;
 
 
     //Crear matriz para colocar las torretas
     class TileMap : public sf::Drawable, public sf::Transformable
+
 {
 public:
 
@@ -110,7 +125,6 @@ private:
                 app.close();
 
 
-
             if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 
                 //Obtener coordenadas de la ventana
@@ -128,12 +142,35 @@ private:
                 cout << "i: " << i  <<"j: " << j << endl;
 
                 //Dibujar la torreta en el cuadrado de la matriz
-                torreta.setPosition(i*32.f ,j*32.f);
-                sf::Color color(255, 0, 0);
-                torreta.setFillColor(color);
+                Torreta torreta1(sf::Vector2f(32.f,32.f));
+                torreta1.setPos(sf::Vector2f(i*32.f ,j*32.f));
+                torreta1.draw(app);
 
 
             }
+             if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+
+             }
+
+
+                //Obtener coordenadas de la ventana
+                sf::Vector2i localPosition = sf::Mouse::getPosition(app);
+                int posicionX = localPosition.x;
+                int posicionY = localPosition.y;
+
+                //Obtener parte entera de la division
+                int i = (posicionX/32);
+                int j = (posicionY/32);
+
+                //Mostrar las coordenadas
+                cout << "Mouse en posicion x: " << posicionX  <<"posicion y: " << posicionY << endl;
+                //Mostrar las i  j
+                cout << "i: " << i  <<"j: " << j << endl;
+
+                //Dibujar el selector en el cuadrado de la matriz
+                selector.setPosition(i*32.f ,j*32.f);
+
+
 
         }
 
@@ -144,13 +181,14 @@ private:
         //app.clear();
 
         // Draw the sprite
-        app.draw(sprite);
+        //app.draw(sprite);
 
         //Dibujar mapa
         app.draw(map);
 
+
         //Dibujar la torreta
-        app.draw(torreta);
+        app.draw(selector);
 
         // Update the window
         app.display();

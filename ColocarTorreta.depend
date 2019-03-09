@@ -3,7 +3,22 @@
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1551173855 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
+1552147089 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
+	"Bala.h"
+	"Torreta.h"
+	<vector>
+
+1552146771 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Bala.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1552146783 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Torreta.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1552147115 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/src/Bala.cpp
+
+1552147119 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/src/Torreta.cpp
 
