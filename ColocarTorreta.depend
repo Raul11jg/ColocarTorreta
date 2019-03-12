@@ -6,7 +6,7 @@
 	"Torreta.h"
 	<vector>
 
-1552155247 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
+1552383958 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Bala.h"
@@ -19,13 +19,16 @@
 	<SFML/System.hpp>
 	<iostream>
 
-1552155652 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Torreta.h
+1552384022 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Torreta.h
 	<SFML/Graphics.hpp>
 	<iostream>
 
 1552147115 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/src/Bala.cpp
 
-1552147119 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/src/Torreta.cpp
+1552383919 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/src/Torreta.cpp
+	"Torreta.h"
+	<SFML/Graphics.hpp>
+	<iostream>
 
 1552147119 ated upstream
 
