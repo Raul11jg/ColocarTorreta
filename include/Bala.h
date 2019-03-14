@@ -1,12 +1,14 @@
 #ifndef BALA_H
 #define BALA_H
 #include <SFML/Graphics.hpp>
+#include "Enemigo.h"
 
 class Bala
 {
     public:
         Bala(sf::Vector2f size);
         void disparar(float speed);
+        void perseguir(Enemigo enemigo);
         void setPos(sf::Vector2f newPos);
         int getLeft();
         int getTop();
