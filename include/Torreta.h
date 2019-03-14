@@ -14,8 +14,8 @@ class Torreta
         void draw(sf::RenderWindow &Window);
         ~Torreta();
     private:
-        sf::Texture *torretaTex;
-        sf::Sprite *torretaSprite;
+        sf::Texture torretaTex;
+        sf::Sprite torretaSprite;
 };
 
 #endif // TORRETA_H
