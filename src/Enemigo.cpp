@@ -1,4 +1,5 @@
 #include "Enemigo.h"
+using namespace std;
 
 Enemigo::Enemigo(sf::Vector2f size)
 {
@@ -7,10 +8,13 @@ Enemigo::Enemigo(sf::Vector2f size)
     enemigo.setFillColor(color);
 }
 void Enemigo::colisionBala(Bala bala){
+
     if(bala.getRight() > enemigo.getPosition().x &&
-    bala.getTop() < enemigo.getPosition().y + enemigo.getSize().y &&
-    bala.getBottom() > enemigo.getPosition().y){
+        bala.getTop() < enemigo.getPosition().y + enemigo.getSize().y &&
+        bala.getBottom() > enemigo.getPosition().y && bala.getLeft() < enemigo.getPosition().x +
+        enemigo.getSize().x){
         enemigo.setPosition(314214,1213213);
+        cout << "Enemigo destruido \n";
     }
 }
 void Enemigo::setPos(sf::Vector2f newPos){

@@ -8,16 +8,16 @@ Bala::Bala(sf::Vector2f size)
 }
 
 void Bala::disparar(float speed){
-    bala.move(speed, 0);
+    bala.move(0,-speed);
 }
 void Bala::setPos(sf::Vector2f newPos){
     bala.setPosition(newPos);
 }
 int Bala::getLeft(){
-    return bala.getPosition().x;
+    return bala.getPosition().x+ bala.getSize().y;
 }
 int Bala::getTop(){
-    return bala.getPosition().y;
+    return bala.getPosition().y+ bala.getSize().x;
 }
 int Bala::getBottom(){
     return bala.getPosition().y + bala.getSize().y;
@@ -30,5 +30,5 @@ void Bala::draw(sf::RenderWindow &Window){
 }
 Bala::~Bala()
 {
-    //dtor
+    bala.setSize(sf::Vector2f(0, 0));
 }

@@ -27,5 +27,10 @@ void Torreta::setPos(sf::Vector2f newPos){
 }
 Torreta::~Torreta()
 {
+/*
+Revisar Delete
+
+*/
+
 
 }

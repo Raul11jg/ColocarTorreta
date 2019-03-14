@@ -1,7 +1,8 @@
 #ifndef ENEMIGO_H
 #define ENEMIGO_H
 #include <SFML/Graphics.hpp>
-#include <Bala.h>
+#include <iostream>
+#include "Bala.h"
 class Enemigo
 {
     public:
