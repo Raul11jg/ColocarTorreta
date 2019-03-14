@@ -137,6 +137,9 @@ private:
              if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
                 disparando=true;
              }
+             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+                exit(0);
+             }
 
 
          if(ponerTorreta ==true){
@@ -178,8 +181,6 @@ private:
                 selector.setPosition(i*32.f ,j*32.f);
         }
 
-
-
         // Clear screen
         app.clear();
         //Dibujar mapa
@@ -187,13 +188,13 @@ private:
         //Dibujar enemigo
         enemigo.draw(app);
          if(disparando ==true){
-                //Recorro el vector de torretas, las cuales dispararan al centro del mapa cada x tiempo
-                for(int i=0; i<vectorTorreta.size(); i++){
-                    Bala nuevaBala(sf::Vector2f(5.f,5.f));
-                    nuevaBala.setPos(sf::Vector2f(vectorTorreta[i].getX(), vectorTorreta[i].getY()));
-                    vectorBalas.push_back(nuevaBala);
-                }
-                disparando=false;
+            //Recorro el vector de torretas, las cuales dispararan al centro del mapa cada x tiempo
+            for(int i=0; i<vectorTorreta.size(); i++){
+                Bala nuevaBala(sf::Vector2f(5.f,5.f));
+                nuevaBala.setPos(sf::Vector2f(vectorTorreta[i].getX(), vectorTorreta[i].getY()));
+                vectorBalas.push_back(nuevaBala);
+            }
+            disparando=false;
          }
 
          for(int i=0; i<vectorBalas.size(); i++){
@@ -206,8 +207,6 @@ private:
         //Recorrer el vector de torretas y dibujar las torretas
         for(int i=0; i<vectorTorreta.size(); i++)
             vectorTorreta[i].draw(app);
-
-        //Dibujar la torreta
 
         app.draw(selector);
 

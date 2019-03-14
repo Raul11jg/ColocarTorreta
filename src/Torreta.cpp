@@ -10,8 +10,8 @@ Torreta::Torreta(std::string imgDirectory)
         exit(0);
     }
     torretaSprite.setTexture(torretaTex);
-    torretaSprite.setOrigin(sf::Vector2f(256,256));
     torretaSprite.setScale(0.05f,0.05f);
+    torretaSprite.setOrigin(sf::Vector2f(16,16));
 }
 int Torreta::getX(){
     return torretaSprite.getPosition().x;

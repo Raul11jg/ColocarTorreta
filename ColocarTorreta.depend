@@ -49,7 +49,7 @@
 
 1552147839 shed changes
 
-1552581003 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/main.cpp
+1552582406 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Bala.h"
@@ -57,14 +57,17 @@
 	"Enemigo.h"
 	<vector>
 
-1552581003 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Bala.h
+1552582914 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Bala.h
 	<SFML/Graphics.hpp>
-	<SFML/System.hpp>
-	<iostream>
 
-1552581359 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Torreta.h
+1552582468 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Torreta.h
 	<SFML/Graphics.hpp>
 	<iostream>
 
 1552581003 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Enemigo.h
+
+1552582020 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/src/Torreta.cpp
+	"Torreta.h"
+	<SFML/Graphics.hpp>
+	<iostream>
 
