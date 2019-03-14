@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1552150176 source:/home/fv/Escritorio/ColocarTorreta/main.cpp
+1552581853 source:/home/fv/Escritorio/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Bala.h"
 	"Torreta.h"
+	"Enemigo.h"
 	<vector>
 
 1552383958 source:/home/fv/Escritorio/ColocarTorreta/ColocarTorreta/main.cpp
@@ -34,18 +35,21 @@
 
 1552154122 /home/fv/Escritorio/ColocarTorreta/ColocarTorreta/include/Enemigo.h
 
-1552150176 /home/fv/Escritorio/ColocarTorreta/include/Bala.h
+1552581853 /home/fv/Escritorio/ColocarTorreta/include/Bala.h
 	<SFML/Graphics.hpp>
 	<SFML/System.hpp>
 	<iostream>
 
-1552147839 /home/fv/Escritorio/ColocarTorreta/include/Torreta.h
+1552581853 /home/fv/Escritorio/ColocarTorreta/include/Torreta.h
 	<SFML/Graphics.hpp>
 	<iostream>
 
 1552147839 source:/home/fv/Escritorio/ColocarTorreta/src/Bala.cpp
 
-1552147839 source:/home/fv/Escritorio/ColocarTorreta/src/Torreta.cpp
+1552582930 source:/home/fv/Escritorio/ColocarTorreta/src/Torreta.cpp
+	"Torreta.h"
+	<SFML/Graphics.hpp>
+	<iostream>
 
 1552147839 shed changes
 
@@ -66,8 +70,5 @@
 
 1552581003 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Enemigo.h
 
-1552582020 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/src/Torreta.cpp
-	"Torreta.h"
-	<SFML/Graphics.hpp>
-	<iostream>
+1552581853 /home/fv/Escritorio/ColocarTorreta/include/Enemigo.h
 
