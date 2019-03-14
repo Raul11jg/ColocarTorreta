@@ -47,6 +47,7 @@
 		<Unit filename="include/Torreta.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Bala.cpp" />
+		<Unit filename="src/Enemigo.cpp" />
 		<Unit filename="src/Torreta.cpp" />
 		<Extensions>
 			<code_completion />
