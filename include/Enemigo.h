@@ -1,34 +1,17 @@
-
 #ifndef ENEMIGO_H
 #define ENEMIGO_H
-
-
+#include <SFML/Graphics.hpp>
+#include <Bala.h>
 class Enemigo
 {
     public:
-        Enemigo(sf::Vector2f size){
-            enemigo.setSize(size);
-            sf::Color color(55, 200, 20);
-            enemigo.setFillColor(color);
-        }
-        void colisionBala(Bala bala){
-            if(bala.getRight() > enemigo.getPosition().x &&
-            bala.getTop() < enemigo.getPosition().y + enemigo.getSize().y &&
-            bala.getBottom() > enemigo.getPosition().y){
-                enemigo.setPosition(314214,1213213);
-            }
-        }
-        void setPos(sf::Vector2f newPos){
-            enemigo.setPosition(newPos);
-        }
-        void draw(sf::RenderWindow &Window){
-            Window.draw(enemigo);
-        }
-    protected:
+        Enemigo(sf::Vector2f size);
+        void colisionBala(Bala bala);
+        void setPos(sf::Vector2f newPos);
+        void draw(sf::RenderWindow &Window);
+        ~Enemigo();
     private:
     sf::RectangleShape enemigo;
 };
 
 #endif // ENEMIGO_H
-
-
