@@ -1,5 +1,6 @@
 #include "Bala.h"
 #include <SFML/Graphics.hpp>
+#include <math.h>
 
 Bala::Bala(sf::Vector2f size)
 {
@@ -26,9 +27,16 @@ int Bala::getBottom(){
 int Bala::getRight(){
     return bala.getPosition().x + bala.getSize().x;
 }
-void Bala::perseguir(Enemigo enemigo){
-    sf::Vector2 direction = (enemigo.getPosX() - bala.getPosition().x, enemigo.getPosY() - bala.getPosition().y);
-    bala.move(3 * direction);
+void Bala::perseguir(int enemigoPosX,int enemigoPosY ){
+    sf::Clock clock;
+    float delta = clock.restart().asSeconds();
+    float angle = atan2(enemigoPosY - bala.getPosition().y, enemigoPosX - bala.getPosition().x);
+    angle =angle * 180 / (atan(1) * 4);
+    sf::Vector2f newpos((cos(angle))*2, (sin(angle))*2);
+
+    //sf::Vector2u direction = normalize(enemigoPosY - bala.getPosition().y, enemigoPosX - bala.getPosition().x);
+    double direction = sqrt(pow(enemigoPosY - bala.getPosition().y, 2) + pow(enemigoPosX - bala.getPosition().x, 2));
+    bala.move(newpos);
 }
 void Bala::draw(sf::RenderWindow &Window){
     Window.draw(bala);

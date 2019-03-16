@@ -2,13 +2,12 @@
 #define ENEMIGO_H
 #include "Bala.h"
 #include <SFML/Graphics.hpp>
-
-
+class Bala;
 class Enemigo
 {
     public:
         Enemigo(sf::Vector2f size);
-        //void colisionBala(Bala bala);
+        void colisionBala(Bala bala);
         void setPos(sf::Vector2f newPos);
         int getPosX();
         int getPosY();

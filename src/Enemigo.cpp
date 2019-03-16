@@ -6,7 +6,7 @@ Enemigo::Enemigo(sf::Vector2f size)
     enemigo.setSize(size);
     sf::Color color(55, 200, 20);
     enemigo.setFillColor(color);
-}/*
+}
 void Enemigo::colisionBala(Bala bala){
 
     if(bala.getRight() > enemigo.getPosition().x &&
@@ -16,7 +16,7 @@ void Enemigo::colisionBala(Bala bala){
         enemigo.setPosition(314214,1213213);
         cout << "Enemigo destruido \n";
     }
-}*/
+}
 void Enemigo::setPos(sf::Vector2f newPos){
     enemigo.setPosition(newPos);
 }

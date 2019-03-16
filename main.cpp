@@ -200,9 +200,9 @@ private:
          for(int i=0; i<vectorBalas.size(); i++){
             vectorBalas[i].draw(app);
             //vectorBalas[i].disparar(3);
-            vectorBalas[i].perseguir(enemigo);
+            vectorBalas[i].perseguir(enemigo.getPosX(), enemigo.getPosY());
             //Si la bala colisiona con el enemigo, muere
-           // enemigo.colisionBala(vectorBalas[i]);
+            enemigo.colisionBala(vectorBalas[i]);
          }
 
         //Recorrer el vector de torretas y dibujar las torretas

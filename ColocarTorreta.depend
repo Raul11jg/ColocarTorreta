@@ -52,7 +52,7 @@
 
 1552147839 shed changes
 
-1552587003 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/main.cpp
+1552753277 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Bala.h"
@@ -60,15 +60,16 @@
 	"Enemigo.h"
 	<vector>
 
-1552586842 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Bala.h
-	<SFML/Graphics.hpp>
+1552753271 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Bala.h
 	"Enemigo.h"
+	<iostream>
+	<SFML/Graphics.hpp>
 
 1552582468 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Torreta.h
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1552588148 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Enemigo.h
+1552750884 /home/fv/Escritorio/PracticaFV/ColocarTorreta/include/Enemigo.h
 	"Bala.h"
 	<SFML/Graphics.hpp>
 
@@ -77,13 +78,19 @@
 	<iostream>
 	"Bala.h"
 
-1552586509 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/src/Bala.cpp
+1552753297 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/src/Bala.cpp
 	"Bala.h"
 	<SFML/Graphics.hpp>
+	<math.h>
 
-1552586702 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/src/Enemigo.cpp
+1552750941 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/src/Enemigo.cpp
 	"Enemigo.h"
 
 1552587069 source:/home/fv/Escritorio/ColocarTorreta/src/Enemigo.cpp
 	"Enemigo.h"
+
+1552588228 source:/home/fv/Escritorio/PracticaFV/ColocarTorreta/src/Torreta.cpp
+	"Torreta.h"
+	<SFML/Graphics.hpp>
+	<iostream>
 
